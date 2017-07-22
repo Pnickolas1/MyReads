@@ -51,7 +51,6 @@ class Book extends Component {
                     {authors}
                 </div>
             </div> 
-                    
         );
   }
 }

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 import * as BooksAPI from './BooksAPI';
-import BookShelf from './BookSelf';
+// eslint-disable-next-line 
+import BookShelf from './BookShelf';
 
 class BookList extends Component {
     state = {
@@ -21,7 +22,7 @@ class BookList extends Component {
         books.shelf = shelf;
 
         //find the index of the book in the array (list in python)
-        let findBookIndex = books.findIndex(b => b.id == book.id);
+        let findBookIndex = books.findIndex(b => b.id === book.id);
 
         books[findBookIndex] = book;
 
@@ -30,10 +31,12 @@ class BookList extends Component {
         });
     })
     .catch(e => this.setState({ books: books }));
+
  };
 
 
 render() {
+
     let wantToReadBooks = this.books.filter(
         book => book.shelf === 'wantToRead'
     );
@@ -78,7 +81,7 @@ render() {
                     />
                 </div> 
               </div>
-            <div>
+             </div>
             <div className="open-search">
                 <Link to="/search">Add Book</Link>
             </div>
@@ -88,4 +91,3 @@ render() {
 }
 
 export default BookList;
-
