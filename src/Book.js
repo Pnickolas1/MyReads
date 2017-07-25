@@ -5,13 +5,13 @@ class Book extends Component {
         let book = this.props.book;
         let imageLink = book.imageLinks
             ? book.imageLinks.smallThumbnail
-            : "https://thumbs.dreamstime.com/t/what-book-was-open-hard-cover-blank-pages-question-mark-sign-written-right-page-isolated-white-67105612.jpg"
+            : "https://books.google.com/googlebooks/images/no_cover_thumb.gif";
         let title = book.title.length > 20 ? book.title.substring(0,20) + "..." : book.title;
         let authors = "";
 
         let shelf = this.props.selectValue
             ? this.props.selectValue : book.shelf ? book.shelf : "none";
-        console.log(shelf)
+        console.log(shelf);
 
         if (book.authors) 
             authors = 
@@ -55,4 +55,4 @@ class Book extends Component {
   }
 }
 
-export default Book
+export default Book;

@@ -90,7 +90,7 @@ class BookSearch extends Component {
                     customClassName="search-books-results"
                 />
             </div>
-            )
+            );
         }
 
     }
