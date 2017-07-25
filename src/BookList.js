@@ -37,15 +37,15 @@ class BookList extends Component {
 
 render() {
 
-    let wantToReadBooks = this.books.filter(
+    let wantToReadBooks = this.state.books.filter(
         book => book.shelf === 'wantToRead'
     );
 
-    let currentlyReading = this.books.filter(
+    let currentlyReading = this.state.books.filter(
         book => book.shelf === 'currentlyReading'        
     );
 
-    let readBooks = this.books.filter(
+    let readBooks = this.state.books.filter(
         book => book.shelf ==='read'
     );
 
