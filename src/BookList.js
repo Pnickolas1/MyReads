@@ -19,7 +19,7 @@ class BookList extends Component {
 
     onShelfChange = (book, shelf ) => {
         let books = this.state.books;
-        books.shelf = shelf;
+        book.shelf = shelf;
 
         //find the index of the book in the array (list in python)
         let findBookIndex = books.findIndex(b => b.id === book.id);

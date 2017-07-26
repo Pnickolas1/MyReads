@@ -10,7 +10,8 @@ class Book extends Component {
         let authors = "";
 
         let shelf = this.props.selectValue
-            ? this.props.selectValue : book.shelf ? book.shelf : "none";
+            ? this.props.selectValue 
+            : book.shelf ? book.shelf : "none";
         console.log(shelf);
 
         if (book.authors) 
@@ -41,6 +42,7 @@ class Book extends Component {
                             <option value="currentlyReading">Currently Reading</option>
                             <option value="wantToRead">Want To Read</option>
                             <option value="read">Read</option>
+                            <option value="none">None</option>
                         </select>
                     </div>
                 </div>
