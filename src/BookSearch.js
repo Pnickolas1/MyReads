@@ -53,7 +53,7 @@ class BookSearch extends Component {
         };
         
 
-        onShelfChange = (book, shelf ) => {
+        onStatusChange = (book, shelf ) => {
             let currentBooks = this.state.currentBooks; 
 
             BooksAPI.update(book, shelf).then(result => {
@@ -85,7 +85,7 @@ class BookSearch extends Component {
                 </div>
                 <BookShelf
                     books={books}
-                    onShelfChange={this.onShelfChange}
+                    onStatusChange={this.onStatusChange}
                     currentBooks={currentBooks}
                     customClassName="search-books-results"
                 />

@@ -5,14 +5,12 @@ class Book extends Component {
         let book = this.props.book;
         let imageLink = book.imageLinks
             ? book.imageLinks.smallThumbnail
-            : "https://books.google.com/googlebooks/images/no_cover_thumb.gif";
+            : "https://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=3614003";
         let title = book.title.length > 20 ? book.title.substring(0,20) + "..." : book.title;
         let authors = "";
 
         let shelf = this.props.selectValue
-            ? this.props.selectValue 
-            : book.shelf ? book.shelf : "none";
-        console.log(shelf);
+            ? this.props.selectValue : book.shelf ? book.shelf : "none";
 
         if (book.authors) 
             authors = 
@@ -25,8 +23,8 @@ class Book extends Component {
                     <div
                         className="book-cover"
                         style={{
-                            width: 128,
-                            height: 193,
+                            width: 130,
+                            height: 195,
                             backgroundImage: `url("${imageLink}")`
                           }}
                     />}
@@ -34,7 +32,7 @@ class Book extends Component {
                         <select
                             value={shelf}
                             onChange={event =>
-                            this.props.onShelfChange(book, event.target.value)}
+                            this.props.onStatusChange(book, event.target.value)}
                         >
                         <option value="none" disabled>
                                 Move To...

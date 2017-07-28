@@ -17,7 +17,7 @@ class BookList extends Component {
         });
     }
 
-    onShelfChange = (book, shelf ) => {
+    onStatusChange = (book, shelf ) => {
         let books = this.state.books;
         book.shelf = shelf;
 
@@ -60,7 +60,7 @@ render() {
                     <h2 className="bookshelf-title">Currently Reading</h2>
                     <BookShelf
                         books={currentlyReading}
-                        onShelfChange={this.onShelfChange}
+                        onStatusChange={this.onStatusChange}
                         customClassName="bookshelf-books"
                     />
                 </div>
@@ -68,7 +68,7 @@ render() {
                     <h2 className="bookshelf-title">Want To Read</h2>
                     <BookShelf
                         books={wantToReadBooks}
-                        onShelfChange={this.onShelfChange}
+                        onStatusChange={this.onStatusChange}
                         customClassName="bookshelf-books"
                     />
                 </div>
@@ -76,7 +76,7 @@ render() {
                     <h2 className="bookshelf-title">Read</h2>
                     <BookShelf
                         books={readBooks}
-                        onShelfChange={this.onShelfChange}
+                        onStatusChange={this.onStatusChange}
                         customClassName="bookshelf-books"
                     />
                 </div> 

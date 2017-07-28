@@ -3,7 +3,7 @@ import Book from './Book';
 
 class BookShelf extends Component {
     render() {
-        let { books, onShelfChange } = this.props;
+        let { books, onStatusChange } = this.props;
         let currentBooks = this.props.currentBooks ? this.props.currentBooks : new Map();
         let customClassName = this.props.customClassName;
         console.log(currentBooks);
@@ -14,7 +14,7 @@ class BookShelf extends Component {
                     {books.map(book =>
                     <li key={book.id}>
                         <Book
-                        onShelfChange={onShelfChange}
+                        onStatusChange={onStatusChange}
                         book={book}
                         selectValue={currentBooks.get(book.id)}
                         />
